@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .letter {
+            width: 60%;
+            margin: 50px auto;
+            padding: 20px;
+            background-color: #f9f9f9;
+            border: 1px solid #ccc;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            transform-origin: top;
+            transition: transform 1s;
+            transform: scaleY(0);
+        }
+        .cover {
+            text-align: center;
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .message {
+            text-align: justify;
+            line-height: 1.6;
+            display: none;
+        }
+        .open-button {
+            display: block;
+            width: 200px;
+            height: 50px;
+            margin: 20px auto;
+            background-color: #f9f9f9;
+            color: #333;
+            text-align: center;
+            line-height: 50px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+<div class="open-button" onclick="openLetter()">Open Letter</div>
+
+<div class="letter" id="letter">
+    <div class="cover">To Mandira</div>
+    <div class="message" id="message">
+        Dear Mandira,<br><br>
+        I hope this letter finds you in the best of health and spirits. I am writing this to express my appreciation for our friendship. I am truly grateful to have you as a friend. Your kindness, understanding, and support have meant so much to me.<br><br>
+        Your smile always brightens my day and your positive energy is infectious. I am truly lucky to know you and I look forward to many more years of our friendship.<br><br>
+        Yours sincerely,<br>
+        Anuj Bhusal
+    </div>
+</div>
+
+<script>
+function openLetter() {
+    var letter = document.getElementById("letter");
+    var message = document.getElementById("message");
+    letter.style.transform = "scaleY(1)";
+    setTimeout(function(){ message.style.display = "block"; }, 1000);
+}
+</script>
+
+</body>
+</html>
